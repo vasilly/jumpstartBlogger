@@ -1,8 +1,17 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
-<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-home"></span> Home</button>
 
-<i class="fa fa-home btn btn-default">
-<%= link_to "Back to Articles List", articles_path %>
-</i>
+<%= link_to "Edit", edit_article_path(@article), class: 'fa fa-edit btn btn-default' %>
+
+
+<%= link_to " Delete", article_path(@article), method: :delete, class: 'fa fa-trash btn btn-default'  %>
+
+
+<%= link_to " Home", articles_path, class: 'fa fa-home btn btn-default' %>
+
+
+
+
+
+<!-- link_to article.title, article_path(article), class: 'article_title'  -->
 
